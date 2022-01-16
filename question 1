@@ -1,0 +1,18 @@
+def fun(s):
+    try:
+        name, url = s.split('@')
+        web,ex = url.split('.')
+    except ValueError:
+        return False
+    
+    if name.replace('-','').replace('_','').isalnum() is False:
+        return False
+    
+    elif web.isalnum() is False:
+        return False
+    
+    elif len(ex) > 3:
+        return False
+    
+    else :
+        return True
